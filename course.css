@@ -1,0 +1,1210 @@
+/* ==========================================
+   CUSTOM CURSOR
+   ========================================== */
+
+div.custom-cursor,
+div.custom-cursor-follower {
+    position: fixed;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference;
+    transition: transform 0.2s ease;
+}
+
+div.custom-cursor {
+    width: 10px;
+    height: 10px;
+    background-color: #ffffff;
+    transform: translate(-50%, -50%);
+}
+
+div.custom-cursor-follower {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+    transform: translate(-50%, -50%);
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+div.custom-cursor-follower.hover {
+    width: 60px;
+    height: 60px;
+    opacity: 0.5;
+}
+
+/* ==========================================
+   NAVIGATION
+   ========================================== */
+
+.navbar {
+    background-color: #fcfbfd;
+    /* background-color: #ffffff; */
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    padding: 1.5rem 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Improve navbar toggler for better mobile experience */
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.navbar.scrolled {
+    background-color: rgba(253, 250, 250, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.brand-text {
+    /* background: linear-gradient(135deg, #ffffff 0%, #b3b3b3 100%); */
+    background-color: #2a0b5e;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.navbar-nav .nav-link {
+    /* color: var(--text-secondary); */
+    color: #2a0b5e;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f1ba08;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 100%;
+}
+
+/* ==========================================
+   FOOTER STYLES
+   ========================================== */
+
+footer {
+    background-color: #1c2331 !important;
+    color: white;
+    padding: 1rem 0 0.5rem 0;
+}
+
+.footer_one {
+    padding: 2rem;
+}
+
+
+
+.footer_one h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer_one p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.social_icons_footer {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social_icons_footer li {
+    display: inline-block;
+}
+
+
+
+
+
+.footer_two {
+    padding: 0;
+}
+
+.footer_two ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_two li {
+    margin-bottom: 0.75rem;
+}
+
+.footer_two a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer_two a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer_terms_privacy {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.footer_terms_privacy a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer_terms_privacy a:hover {
+    color: var(--accent-color);
+}
+
+.footer_copy_right {
+    text-align: center;
+    color: #bbb;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+hr {
+    border-color: #444;
+    margin: 0rem 0;
+}
+
+.footer-address-img {
+    width: 12px;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+img[alt="Address"],
+img[alt="Email"],
+img[alt="Phone No"] {
+    width: 12px;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+/* Animation classes for footer */
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20px, 0);
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20px, 0);
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate__zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate__delay-0-2s {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.animate__delay-0-4s {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.animate__delay-0-6s {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.animate__delay-0-8s {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.animate__delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.animate__delay-1-2s {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.animate__delay-1-4s {
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+
+.animate__delay-1-6s {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+.animate__delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.animate__delay-2-2s {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+
+.animate__delay-2-4s {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+.animate__delay-2-6s {
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN
+   ========================================== */
+
+@media (min-width : 1024px) {
+    .navbar-brand {
+        margin-left: 50px;
+    }
+
+
+
+}
+
+@media (min-width : 1440px) {
+    .navbar-brand {
+        margin-left: 50px;
+    }
+
+}
+
+@media (max-width: 991px) {
+    .navbar-nav .nav-link {
+        margin: 0.5rem 0;
+    }
+
+    .btn-contact {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+
+    /* Dropdown menu adjustments for mobile */
+    .dropdown-menu {
+        width: 2px;
+        margin-top: 0;
+        border-radius: 0;
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0.95);
+        position: static;
+        float: none;
+    }
+
+    .dropdown-item {
+        width: 2px;
+        margin: 0;
+        border-radius: 0;
+    }
+
+    .dropdown-item:hover {
+        transform: none;
+        background-color: rgba(248, 249, 250, 0.8);
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        cursor: default;
+    }
+
+    .navbar {
+        width: 100%;
+
+    }
+
+    .custom-cursor,
+    .custom-cursor-follower {
+        display: none;
+    }
+
+    /* Improved mobile navigation */
+    .navbar-nav .nav-link {
+        padding: 0.5rem 1rem;
+    }
+
+    /* Better spacing for mobile */
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    /* Adjust button sizes for better touch targets */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    /* Improve form elements for mobile */
+    input,
+    textarea,
+    select {
+        min-height: 44px;
+    }
+
+    /* Mobile navbar adjustments */
+    .navbar {
+        padding: 1rem 0;
+    }
+
+    .navbar-toggler {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Navigation adjustments */
+    .navbar {
+        padding: 0.75rem 0.5rem !important;
+    }
+
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+    
+    .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        width: 100%;
+        overflow-x: hidden;
+    }
+    
+    html {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    /* Navigation adjustments for small screens */
+    .navbar {
+        padding: 0.75rem 0.5rem !important;
+        width: 100%;
+    }
+
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .container {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}
+
+/* =====================================
+   FIXED FOOTER DROPUP (GLOBAL SAFE)
+   ===================================== */
+
+.floating-container {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+}
+
+.floating-button {
+    width: 60px;
+    height: 60px;
+    background: #f6f5f8;
+    color: #2a0b5e;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.floating-button img {
+    width: 32px;
+}
+
+.floating-menu {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.floating-container.active .floating-menu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+.menu-item {
+    width: 48px;
+    height: 48px;
+    color: #2a0b5e;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item img {
+    width: 22px;
+}
+
+
+
+
+/* Enquiry Modal */
+.enquiry-modal {
+    border-radius: 16px;
+    border: none;
+}
+
+.enquiry-modal .modal-title {
+    font-weight: 700;
+    color: #2a0b5e;
+}
+
+.btn-enquiry {
+    background: #f1ba08;
+    color: #000;
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-enquiry:hover {
+    background: #e6ae00;
+}
+
+/* ===============================
+   COURSE HERO RESPONSIVE FIX
+   =============================== */
+/* 
+.hero-image {
+    position: relative;
+    min-height: 60vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+
+.hero-title {
+    font-size: clamp(1.6rem, 5vw, 3rem);
+    line-height: 1.2;
+} */
+
+/* ==========================================
+   COURSE DETAILS SECTION
+   ========================================== */
+
+.course-details-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+/* HERO RESPONSIVE FIX */
+.hero-image {
+    position: relative;
+    min-height: 60vh;
+    width: 100%;
+    background-image: url('./images/Cybersecurity & Ethical Hacking.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(42, 11, 94, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem 1rem;
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-title {
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    line-height: 1.3;
+    word-wrap: break-word;
+    word-break: break-word;
+    hyphens: auto;
+    padding: 0;
+    margin: 0;
+}
+
+/* Card Styles */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+/* Accordion Styles */
+.custom-accordion .accordion-button {
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.25rem;
+}
+
+.custom-accordion .accordion-body {
+    padding: 1.25rem;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Certificate Badge */
+.certificate-badge {
+    margin-top: 2rem;
+}
+
+.badge-content {
+    max-width: 100%;
+    width: 100%;
+}
+
+/* Enrollment Options */
+.enrollment-options .btn {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.enrollment-options .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.enrollment-options .btn a {
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* List Group Items */
+.list-group-item {
+    font-size: 0.95rem;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN FOR COURSE PAGE
+   ========================================== */
+
+/* Large screens (1200px and up) */
+@media (min-width: 1200px) {
+    .card-body {
+        padding: 3rem;
+    }
+    
+    .hero-image {
+        min-height: 65vh;
+    }
+}
+
+/* Medium screens (992px to 1199px) */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .card-body {
+        padding: 2.5rem;
+    }
+    
+    .hero-image {
+        min-height: 60vh;
+    }
+}
+
+/* Tablets (768px to 991px) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .course-details-section {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+    
+    .hero-image {
+        min-height: 50vh;
+        border-radius: 15px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.8rem, 4vw, 2.5rem);
+        padding: 0 1.5rem;
+    }
+    
+    .card-body {
+        padding: 2rem 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+    
+    .custom-accordion .accordion-button {
+        font-size: 0.95rem;
+        padding: 0.875rem 1rem;
+    }
+    
+    .custom-accordion .accordion-body {
+        padding: 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* Small tablets and large phones (576px to 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+    .main-content {
+        margin-top: 60px !important;
+    }
+    
+    .course-details-section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-top: 1rem !important;
+    }
+    
+    .hero-image {
+        min-height: 45vh;
+        border-radius: 12px;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.5rem, 5vw, 2rem);
+        padding: 0 1rem;
+        margin-bottom: 1rem !important;
+    }
+    
+    .card {
+        margin-bottom: 1.5rem !important;
+        border-radius: 15px !important;
+    }
+    
+    .card-body {
+        padding: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.1rem;
+    }
+    
+    .card-title.h4 {
+        font-size: 1.15rem;
+    }
+    
+    .lead {
+        font-size: 1rem;
+    }
+    
+    .custom-accordion .accordion-button {
+        font-size: 0.9rem;
+        padding: 0.75rem 1rem;
+    }
+    
+    .custom-accordion .accordion-body {
+        padding: 1rem;
+        font-size: 0.875rem;
+    }
+    
+    .enrollment-options .btn {
+        padding: 0.75rem 1rem;
+        font-size: 0.95rem;
+    }
+    
+    .list-group-item {
+        font-size: 0.9rem;
+        padding: 0.75rem 0 !important;
+    }
+    
+    .badge-content {
+        padding: 1.5rem !important;
+    }
+}
+
+/* Small phones (up to 575px) */
+@media (max-width: 575px) {
+    .main-content {
+        margin-top: 60px !important;
+    }
+    
+    .course-details-section {
+        padding-top: 0.75rem !important;
+        padding-bottom: 0.75rem !important;
+        margin-top: 0 !important;
+    }
+    
+    .container {
+        padding-left: 0.75rem !important;
+        padding-right: 0.75rem !important;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+    
+    .row {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .hero-image {
+        min-height: 35vh !important;
+        max-height: 40vh;
+        border-radius: 12px;
+        margin-bottom: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .hero-content {
+        padding: 1rem 0.5rem !important;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.1rem, 5.5vw, 1.5rem) !important;
+        line-height: 1.4 !important;
+        margin-bottom: 0.5rem !important;
+        padding: 0 !important;
+    }
+    
+    .row.g-4 {
+        --bs-gutter-y: 0.75rem;
+        --bs-gutter-x: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .card {
+        margin-bottom: 0.75rem !important;
+        border-radius: 12px !important;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .card-body {
+        padding: 1rem !important;
+    }
+    
+    .card-title {
+        font-size: 0.95rem !important;
+    }
+    
+    .card-title.h4 {
+        font-size: 1rem !important;
+    }
+    
+    .d-flex.align-items-center.mb-4 {
+        margin-bottom: 0.75rem !important;
+        flex-wrap: wrap;
+    }
+    
+    .bg-primary.bg-opacity-10,
+    .bg-success.bg-opacity-10,
+    .bg-info.bg-opacity-10,
+    .bg-warning.bg-opacity-10,
+    .bg-danger.bg-opacity-10 {
+        padding: 0.5rem !important;
+        margin-right: 0.5rem !important;
+        min-width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .bg-primary.bg-opacity-10 .bi,
+    .bg-success.bg-opacity-10 .bi,
+    .bg-info.bg-opacity-10 .bi,
+    .bg-warning.bg-opacity-10 .bi,
+    .bg-danger.bg-opacity-10 .bi {
+        font-size: 0.9rem !important;
+        margin: 0 !important;
+    }
+    
+    .lead {
+        font-size: 0.9rem !important;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+    
+    p {
+        font-size: 0.85rem !important;
+        line-height: 1.6;
+        margin-bottom: 0.5rem;
+    }
+    
+    .row.g-3 {
+        --bs-gutter-y: 0.5rem;
+        --bs-gutter-x: 0.5rem;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    .col-md-6,
+    .col-12 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .d-flex.align-items-start {
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    
+    .bi-check-circle-fill,
+    .bi-currency-rupee,
+    .bi-people,
+    .bi-cash {
+        font-size: 0.9rem !important;
+        margin-right: 0.5rem !important;
+        margin-top: 0.2rem !important;
+        flex-shrink: 0;
+        min-width: 16px;
+    }
+    
+    .d-flex.align-items-start > div {
+        flex: 1;
+        min-width: 0;
+        word-wrap: break-word;
+    }
+    
+    .d-flex.align-items-start strong {
+        display: block;
+        margin-bottom: 0.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .custom-accordion .accordion-item {
+        margin-bottom: 0.5rem !important;
+        border-radius: 8px !important;
+    }
+    
+    .custom-accordion .accordion-button {
+        font-size: 0.8rem !important;
+        padding: 0.625rem 0.75rem !important;
+        line-height: 1.4;
+        word-wrap: break-word;
+    }
+    
+    .custom-accordion .accordion-button:not(.collapsed) {
+        padding-bottom: 0.625rem !important;
+    }
+    
+    .custom-accordion .accordion-button .bi-chevron-down {
+        font-size: 0.75rem !important;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+    }
+    
+    .custom-accordion .accordion-body {
+        padding: 0.75rem !important;
+        font-size: 0.8rem !important;
+        line-height: 1.5;
+    }
+    
+    .card-header {
+        padding: 0.75rem !important;
+    }
+    
+    .card-header h3,
+    .card-header .card-title {
+        font-size: 0.9rem !important;
+        line-height: 1.3;
+    }
+    
+    .card-header .bi {
+        font-size: 0.9rem !important;
+        margin-right: 0.5rem !important;
+    }
+    
+    .enrollment-options .btn {
+        padding: 0.75rem 0.875rem !important;
+        font-size: 0.85rem !important;
+        margin-bottom: 0.5rem !important;
+        border-radius: 8px !important;
+        min-height: 44px;
+    }
+    
+    .enrollment-options .btn .bi {
+        font-size: 0.9rem !important;
+    }
+    
+    .list-group-item {
+        font-size: 0.8rem !important;
+        padding: 0.5rem 0 !important;
+    }
+    
+    .list-group-item .fw-bold {
+        font-size: 0.85rem !important;
+        margin-bottom: 0.25rem;
+    }
+    
+    .list-group-item .bi {
+        font-size: 0.85rem !important;
+        margin-right: 0.5rem;
+    }
+    
+    .badge-content {
+        padding: 1rem !important;
+    }
+    
+    .badge-content .bi-award {
+        font-size: 1.5rem !important;
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .badge-content h5 {
+        font-size: 0.9rem !important;
+    }
+    
+    .badge-content p {
+        font-size: 0.8rem !important;
+    }
+    
+    .card-body p.d-flex {
+        font-size: 0.8rem !important;
+        flex-wrap: wrap;
+        margin-bottom: 0.5rem;
+    }
+    
+    .card-body p .bi {
+        font-size: 0.9rem !important;
+        margin-right: 0.5rem;
+        flex-shrink: 0;
+    }
+    
+    /* Prevent horizontal overflow */
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+    }
+    
+    * {
+        box-sizing: border-box;
+    }
+}
+
+/* Extra small phones (up to 375px) */
+@media (max-width: 375px) {
+    .container {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+    
+    .hero-image {
+        min-height: 30vh !important;
+        max-height: 35vh;
+        border-radius: 10px;
+    }
+    
+    .hero-content {
+        padding: 0.75rem 0.5rem !important;
+    }
+    
+    .hero-title {
+        font-size: clamp(1rem, 6vw, 1.3rem) !important;
+        line-height: 1.4 !important;
+    }
+    
+    .course-details-section {
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+    
+    .card-body {
+        padding: 0.875rem !important;
+    }
+    
+    .card-title.h4 {
+        font-size: 0.9rem !important;
+    }
+    
+    .custom-accordion .accordion-button {
+        font-size: 0.75rem !important;
+        padding: 0.5rem 0.625rem !important;
+    }
+    
+    .custom-accordion .accordion-body {
+        font-size: 0.75rem !important;
+        padding: 0.625rem !important;
+    }
+    
+    .enrollment-options .btn {
+        font-size: 0.8rem !important;
+        padding: 0.625rem 0.75rem !important;
+    }
+    
+    .list-group-item {
+        font-size: 0.75rem !important;
+    }
+    
+    p, .lead {
+        font-size: 0.8rem !important;
+    }
+}
+
+/* Additional responsive fixes */
+@media (max-width: 767px) {
+    .course-details-section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+    
+    .hero-image {
+        min-height: 45vh;
+    }
+}
+
+/* Ensure no horizontal scroll on any device */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+@media (max-width: 575px) {
+    .col-lg-8,
+    .col-lg-4 {
+        padding-left: 0.5rem !important;
+        padding-right: 0.5rem !important;
+    }
+}

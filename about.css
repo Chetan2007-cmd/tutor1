@@ -1,0 +1,845 @@
+/* ==========================================
+   ABOUT PAGE STYLES
+   ========================================== */
+
+/* Hero Section */
+.hero-section {
+    margin-top: 82px;
+    min-height: 85vh;
+    width: 95%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.hero-title {
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -2px;
+    position: relative;
+    z-index: 1;
+    color: #2a0b5e;
+}
+
+.hero-title .line {
+    display: block;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.hero-title .line:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.hero-title .line:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.hero-description {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #2a0b5e;
+    max-width: 600px;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.8s forwards;
+}
+
+/* Comprehensive About Section */
+.about-comprehensive-section {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 2rem 0;
+}
+
+.comprehensive-card {
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.comprehensive-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+}
+
+.comprehensive-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #f1ba08, #8b5cf6, #ec4899);
+}
+
+.section-title {
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 0.5rem;
+    color: #2a0b5e;
+}
+
+.sub-section-title {
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    color: #2a0b5e;
+    margin-bottom: 1rem;
+}
+
+.title-underline {
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, #f1ba08, #8b5cf6);
+    margin: 0.25rem auto;
+    border-radius: 2px;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #495057;
+}
+
+.section-description.lead {
+    font-size: 1.25rem;
+}
+
+.expertise-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.expertise-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.expertise-list li i {
+    color: #f1ba08;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* Leadership Section */
+.leadership-section {
+    margin: 0.5rem 0;
+}
+
+.leadership-grid {
+    margin-top: 2rem;
+}
+
+.leader-card-row {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    height: 100%;
+    margin-bottom: 2rem;
+}
+
+.leader-card-row:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(99, 102, 241, 0.15);
+}
+
+.leader-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.leader-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f1ba08;
+}
+
+.leader-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.leader-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2a0b5e;
+    text-align: left;
+    margin-bottom: 0.5rem;
+}
+
+.leader-title {
+    color: #f1ba08;
+    font-weight: 600;
+    text-align: left;
+    margin-bottom: 1.5rem;
+}
+
+.leader-bio {
+    color: #6c757d;
+    line-height: 1.7;
+    text-align: left;
+    margin: 0;
+}
+
+
+
+/* Vision, Mission, Values Cards */
+.vision-mission-values-grid {
+    margin: 0.5rem 0;
+}
+
+.vision-card, .mission-card, .values-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.vision-card:hover, .mission-card:hover, .values-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+}
+
+.card-icon i {
+    font-size: 2rem;
+    color: #f1ba08;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2a0b5e;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.card-description {
+    color: #6c757d;
+    line-height: 1.7;
+    text-align: center;
+}
+
+.mission-list, .values-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mission-list li, .values-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+}
+
+.mission-list li i, .values-list li i {
+    color: #f1ba08;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+/* Governance Section */
+.governance-section {
+    margin: 0rem 0;
+}
+
+/* Roadmap Section */
+.roadmap-section {
+    margin: 1rem 0;
+}
+
+.roadmap-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.roadmap-list li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #495057;
+}
+
+.roadmap-list li i {
+    color: #f1ba08;
+    margin-right: 10px;
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+.commitment-section {
+    margin-top: 3rem;
+}
+
+/* Team Section */
+.team-section {
+    margin: 0.25rem 0;
+}
+
+.team-grid {
+    margin-top: 2rem;
+}
+
+.team-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+    border-color: rgba(241, 186, 8, 0.2);
+}
+
+.team-image {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 1.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #f1ba08;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2a0b5e;
+    margin-bottom: 0.5rem;
+}
+
+.team-title {
+    color: #f1ba08;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.team-bio {
+    color: #6c757d;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Leadership Responsive Adjustments */
+@media (max-width: 991px) {
+    .leader-image {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .leader-card-row {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .leader-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .leader-name {
+        font-size: 1.3rem;
+    }
+    
+    .leader-title {
+        font-size: 0.9rem;
+    }
+    
+    .leader-bio {
+        font-size: 0.9rem;
+    }
+    
+    /* Stack elements on smaller screens */
+    .leader-card-row {
+        text-align: center;
+    }
+    
+    .leader-content {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .leader-card-row {
+        padding: 1rem;
+    }
+    
+    .leader-image {
+        width: 90px;
+        height: 90px;
+        margin: 0 auto;
+    }
+}
+
+/* Team Responsive Adjustments */
+@media (max-width: 991px) {
+    .team-image {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    .team-image {
+        width: 90px;
+        height: 90px;
+    }
+    
+    .team-name {
+        font-size: 1.2rem;
+    }
+    
+    .team-title {
+        font-size: 0.9rem;
+    }
+    
+    .team-bio {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .team-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .team-image {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+    .hero-section {
+        padding-top: 5rem;
+    }
+    
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .comprehensive-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.25rem;
+    }
+    
+    .hero-description {
+        font-size: 1.125rem;
+    }
+    
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .sub-section-title {
+        font-size: 1.5rem;
+    }
+    
+    .comprehensive-card {
+        padding: 1rem;
+    }
+    
+    .section-description,
+    .section-description.lead {
+        font-size: 1rem;
+    }
+    
+    .roadmap-list li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-description {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.5rem;
+    }
+    
+    .sub-section-title {
+        font-size: 1.25rem;
+    }
+    
+    .comprehensive-card {
+        padding: 0.5rem;
+    }
+    
+
+    
+    .vision-card, .mission-card, .values-card {
+        padding: 1.5rem;
+    }
+    
+    .card-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .card-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .card-title {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #1c2331 !important;
+    color: white;
+    padding: 4rem 0 2rem 0;
+}
+
+.footer_one {
+    padding: 2rem;
+}
+
+.footer_one img {
+    max-width: 200px;
+    margin-bottom: 1.5rem;
+}
+
+.footer_one h4 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.footer_one p {
+    color: #bbb;
+    line-height: 1.6;
+}
+
+.social_icons_footer {
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social_icons_footer li {
+    display: inline-block;
+}
+
+.social_icons_footer img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+.social_icons_footer a:hover img {
+    transform: scale(1.1);
+}
+
+.footer_two {
+    padding: 1rem;
+}
+
+.footer_two ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer_two li {
+    margin-bottom: 0.75rem;
+}
+
+.footer_two a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer_two a:hover {
+    color: var(--accent-color);
+    padding-left: 5px;
+}
+
+.footer_terms_privacy {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+    padding: 0;
+}
+
+.footer_terms_privacy a {
+    color: #bbb;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer_terms_privacy a:hover {
+    color: var(--accent-color);
+}
+
+.footer_copy_right {
+    text-align: center;
+    color: #bbb;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+hr {
+    border-color: #444;
+    margin: 2rem 0;
+}
+
+.footer-address-img {
+    width: 12px;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+img[alt="Address"], img[alt="Email"], img[alt="Phone No"] {
+    width: 12px;
+    margin-right: 5px;
+    margin-top: -2px;
+}
+
+/* Animation classes for footer */
+.animate__animated {
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animate__fadeInUp {
+    -webkit-animation-name: fadeInUp;
+    animation-name: fadeInUp;
+}
+
+@-webkit-keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20px, 0);
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 20px, 0);
+        transform: translate3d(0, 20px, 0);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.animate__zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+}
+
+@-webkit-keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.animate__delay-0-2s {
+    -webkit-animation-delay: 0.2s;
+    animation-delay: 0.2s;
+}
+
+.animate__delay-0-4s {
+    -webkit-animation-delay: 0.4s;
+    animation-delay: 0.4s;
+}
+
+.animate__delay-0-6s {
+    -webkit-animation-delay: 0.6s;
+    animation-delay: 0.6s;
+}
+
+.animate__delay-0-8s {
+    -webkit-animation-delay: 0.8s;
+    animation-delay: 0.8s;
+}
+
+.animate__delay-1s {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.animate__delay-1-2s {
+    -webkit-animation-delay: 1.2s;
+    animation-delay: 1.2s;
+}
+
+.animate__delay-1-4s {
+    -webkit-animation-delay: 1.4s;
+    animation-delay: 1.4s;
+}
+
+.animate__delay-1-6s {
+    -webkit-animation-delay: 1.6s;
+    animation-delay: 1.6s;
+}
+
+.animate__delay-2s {
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.animate__delay-2-2s {
+    -webkit-animation-delay: 2.2s;
+    animation-delay: 2.2s;
+}
+
+.animate__delay-2-4s {
+    -webkit-animation-delay: 2.4s;
+    animation-delay: 2.4s;
+}
+
+.animate__delay-2-6s {
+    -webkit-animation-delay: 2.6s;
+    animation-delay: 2.6s;
+}
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* =====================================
+   FIXED FOOTER DROPUP (GLOBAL SAFE)
+   ===================================== */
+
+/* Enquiry Modal */
+.enquiry-modal {
+    border-radius: 16px;
+    border: none;
+}
+
+.enquiry-modal .modal-title {
+    font-weight: 700;
+    color: #2a0b5e;
+}
+
+.btn-enquiry {
+    background: #f1ba08;
+    color: #000;
+    padding: 12px 36px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: none;
+}
+
+.btn-enquiry:hover {
+    background: #e6ae00;
+}
+
